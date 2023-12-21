@@ -117,9 +117,6 @@ marquee{
   z-index: 2;
 }
 #view:hover{
-  #left{
-    background-color: red;
-  }
   background-color: #3a3a3a;
 }
 
