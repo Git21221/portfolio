@@ -1,8 +1,8 @@
 let images = [
-  '/Screenshot 2023-12-21 100757.png',
-  '/Screenshot 2023-12-21 100853.png',
-  '/Screenshot 2023-12-21 101036.png',
-  '/Screenshot 2023-12-21 101128.png',
+  'Screenshot 2023-12-21 100757.png',
+  'Screenshot 2023-12-21 100853.png',
+  'Screenshot 2023-12-21 101036.png',
+  'Screenshot 2023-12-21 101128.png',
 ];
 let githubLink = [
   'https://github.com/Git21221/PlayBeatz',
