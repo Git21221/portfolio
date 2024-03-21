@@ -29,27 +29,6 @@ view.addEventListener("click", () => {
   window.open(githubLink[temp]);
 });
 
-body.addEventListener("mousemove", () => {
-  const rect = body.getBoundingClientRect();
-  const x = ((event.clientX - rect.left) / body.offsetWidth) * 100;
-  const y = ((event.clientY - rect.top) / body.offsetHeight) * 100;
-
-  gradient.style.left = x + "%";
-  gradient.style.boxShadow = "10px 10px 300px 80px rgb(0, 112, 240)";
-  gradient.style.top = y + "%";
-});
-
-works.addEventListener("mousemove", () => {
-  const rect = works.getBoundingClientRect();
-  const x = ((event.clientX - rect.left) / works.offsetWidth) * 100;
-  const y = ((event.clientY - rect.top) / works.offsetHeight) * 100;
-
-  gradient_green.style.left = x + "%";
-  gradient_green.style.boxShadow =
-    "10px 10px 300px 80px rgba(94, 255, 0, 0.411)";
-  gradient_green.style.top = y + 100 + "%";
-});
-
 const sendMail = () => {
   const sub = `${subject.value} from (${username.value})`;
   window.open(
