@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Portfolio - Know about me</title>
+  <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
 </head>
 <body>
 
-
+<div class="gradientend"></div>
 
   <section id="navbar">
     <div class="navbar-menu">
@@ -29,7 +30,7 @@
 
 
   <section id="body">
-    <div id="gradient"></div>
+    <!-- <div id="gradient"></div> -->
     <marquee behavior="scroll" direction="ltr">Hello this is Saikat Das</marquee>
     <img src="https://www.jamiesale-cartoonist.com/wp-content/uploads/cartoon-cat-free.png" alt="" srcset="" height="300">
   </section>
@@ -37,7 +38,7 @@
 
 
   <section id="works">
-    <div id="gradient_green"></div>
+    <!-- <div id="gradient_green"></div> -->
     <div class="works-section">
       <h1>My works</h1>
       <div class="imageContainer">
@@ -51,10 +52,20 @@
 
 
   <section id="skills">
-    <div class="skills-section">
+    <!-- <div class="skills-section">
       <h1>Skills</h1>
-      <div class="skills-box"></div>
-    </div>
+      <div class="skills-box">
+        <div class="skillsname" id="html">HTML</div>
+        <div class="skillsname" id="css">CSS</div>
+        <div class="skillsname" id="js">JavaScript</div>
+        <div class="skillsname" id="react">ReactJS</div>
+        <div class="skillsname" id="node">Node</div>
+        <div class="skillsname" id="ex">Express</div>
+        <div class="skillsname" id="mongo">MongoDB</div>
+        <div class="skillsname" id="rn">React-native</div>
+      </div>
+    </div> -->
+    <div id="container" style="width: 600px; height: 500px"></div>
   </section>
 
 
@@ -63,11 +74,15 @@
     <div class="aboutMeContact">
       <div class="aboutme">
         <h1>About Me</h1>
-        <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ab fuga magnam dolore quos rerum inventore, necessitatibus qui maxime. Consequatur!</div>
+        <div class="des">Hey, I'm Saikat Das, a third-year Computer Science student with a passion for fullstack development. Proficient in HTML, CSS, JavaScript, Figma, reactJS. I enjoy crafting engaging and user-friendly interfaces. Eager to contribute to real-world projects and always up for a coding challenge. Let's build something awesome together!</div>
       </div>
       <div class="contact">
         <h1>Contact</h1>
-        <div class="form">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, excepturi. Totam illum, exercitationem quasi accusamus dolorem officia tenetur dolor voluptatum!
+        <div class="form">
+          <input type="text" placeholder="Name" id="username">
+          <input type="text" placeholder="Enter Subject" id="subject">
+          <textarea type="text" placeholder="description" id="bodyofmail"></textarea>
+          <button onclick="sendMail()">Send</button>
         </div>
       </div>
     </div>
@@ -76,6 +91,39 @@
 
   
   <section id="footer"></section>
+  <script>
+    anychart.onDocumentReady(function() {
+
+      // set the data
+      var data = {
+          header: ["Name", "Rating"],
+          rows: [
+            ["HTML", 10],
+            ["CSS", 9],
+            ["JS", 9],
+            ["MongoDB", 8],
+            ["NodeJS", 6],
+            ["expressJS", 7],
+            ["react", 8],
+            ["react-native", 5]
+      ]};
+
+      // create the chart
+      var chart = anychart.column();
+
+      // add the data
+      chart.data(data);
+
+      // set the chart title
+      chart.title("Skills chart");
+
+      // draw
+      chart.container("container");
+      chart.draw();
+      chart.background("");
+    });
+  </script>
 </body>
 <script src="script.js"></script>
+
 </html>
